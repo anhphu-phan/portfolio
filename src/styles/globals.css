@@ -1,3 +1,15 @@
+@import url("https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .nav-open {
+    clip-path: circle(1000px at 100% -10%);
+  }
+
+  .nav-close {
+    clip-path: circle(0px at 100% -10%);
+  }
+}
