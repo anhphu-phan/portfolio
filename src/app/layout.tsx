@@ -3,6 +3,7 @@ import React from "react";
 import type { Metadata } from "next";
 
 import { inter } from "@/fonts";
+import { Footer, Navbar } from "@/components";
 
 export const metadata: Metadata = {
   title: "Anh Phu Phan Portfolio",
@@ -16,7 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

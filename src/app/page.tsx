@@ -1,11 +1,5 @@
-import { Footer, Main, Navbar } from "@/components";
+import { Main } from "@/components";
 
 export default function Home() {
-  return (
-    <>
-      <Navbar />
-      <Main />
-      <Footer />
-    </>
-  );
+  return <Main />;
 }
