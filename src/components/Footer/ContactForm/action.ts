@@ -5,7 +5,6 @@ import * as nodeMailer from "nodemailer";
 import { OAuth2Client } from "google-auth-library";
 
 import formSchema from "./validator";
-import SMTPTransport from "nodemailer/lib/smtp-transport";
 import Mail from "nodemailer/lib/mailer";
 
 const oauth2Client = new OAuth2Client(
