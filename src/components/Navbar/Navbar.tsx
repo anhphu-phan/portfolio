@@ -10,19 +10,19 @@ import MobileNavMenu from "./MobileNavMenu";
 const navItems: NavItemType[] = [
   {
     name: "Home",
-    path: "#",
+    path: "/#",
   },
   {
     name: "Skills",
-    path: "#skills",
+    path: "/#skills",
   },
   {
     name: "Projects",
-    path: "#projects",
+    path: "/#projects",
   },
   {
     name: "Contact",
-    path: "#contact",
+    path: "/#contact",
   },
 ];
 
