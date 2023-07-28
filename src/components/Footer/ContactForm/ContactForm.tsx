@@ -36,7 +36,6 @@ export default function ContactForm() {
     try {
       await submit(data);
     } catch (error) {
-      console.log(error);
       toast({
         title: "Opps!",
         description: "Something went wrong.",

@@ -42,8 +42,7 @@ export default async function submit(values: z.infer<typeof formSchema>) {
   };
 
   try {
-    const response = await transport.sendMail(mailOptions);
-    console.log("🚀 ~ file: action.ts:45 ~ submit ~ response:", response);
+    await transport.sendMail(mailOptions);
   } catch (error) {
     console.log(error);
     if (error instanceof Error) {
