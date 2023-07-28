@@ -1,14 +1,14 @@
-import { cn } from "@/utils";
+import cn from "@/utils/cn";
 import { ContactForm } from "./ContactForm";
 
 import { rufina } from "@/fonts";
 
 export default function Footer() {
   return (
-    <div className="mt-auto flex flex-col sm:flex-row gap-12 bg-slate-300 px-20 py-12">
+    <div className="mt-auto flex flex-col gap-12 bg-slate-300 px-20 py-12 sm:flex-row">
       <div
         className={cn(
-          "flex items-center grow justify-center text-[length:calc(2rem+0.50625vw)] font-semibold text-center",
+          "flex grow items-center justify-center text-center text-[length:calc(2rem+0.50625vw)] font-semibold",
           rufina.className,
         )}
       >

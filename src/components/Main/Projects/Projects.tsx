@@ -1,22 +1,20 @@
 import Section from "../Section";
 import cn from "@/utils/cn";
 import Project from "./Project";
-import getProjectIds from "@/utils/getProjectIds";
+import { projects } from "@/data";
 
 interface Props {
   className?: string;
 }
 
 export default async function Projects({ className }: Props) {
-  const projectIds = await getProjectIds();
-
   return (
     <Section name="projects" className={cn(className)}>
       <div className="flex flex-col items-center gap-20 py-12">
         <h3 className="text-3xl font-semibold">Here are my recent projects:</h3>
 
-        {projectIds.map((projectId) => (
-          <Project key={projectId} projectId={projectId} />
+        {projects.map((project) => (
+          <Project key={project.name} project={project} />
         ))}
       </div>
     </Section>

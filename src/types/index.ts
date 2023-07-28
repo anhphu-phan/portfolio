@@ -18,17 +18,12 @@ export interface Tech {
   };
 }
 
-export interface ProjectWithoutImage {
+export interface Project {
   name: string;
+  summary: string;
   description: string;
   techs: string[];
   githubUrl: string;
+  imageDir: string;
   liveUrl?: string;
 }
-
-export interface ProjectImage {
-  main: StaticImageData;
-  list: StaticImageData[];
-}
-
-export type Project = ProjectWithoutImage & { images: ProjectImage };
