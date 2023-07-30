@@ -49,6 +49,11 @@ const techs: Tech = {
     name: "Git",
     iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg",
   },
+  github: {
+    name: "GitHub",
+    iconUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg",
+  },
   mui: {
     name: "Material UI",
     iconUrl:
