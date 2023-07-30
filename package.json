@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@types/nodemailer": "^6.4.9",
+    "@types/webpack-env": "^1.18.1",
     "clsx": "^2.0.0",
     "eslint": "^8.45.0",
     "eslint-plugin-react": "^7.33.0",
