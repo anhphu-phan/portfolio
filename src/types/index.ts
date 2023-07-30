@@ -25,5 +25,5 @@ export interface Project {
   techs: string[];
   githubUrl: string;
   imageDir: string;
-  liveUrl?: string;
+  liveUrl: string;
 }
