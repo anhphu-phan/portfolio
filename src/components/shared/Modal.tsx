@@ -51,16 +51,20 @@ type ModalFooterProps = React.PropsWithChildren<{
   className?: string;
 }>;
 
+const ModalContent = ({ children, className }: ModalHeaderProps) => {
+  return <div className={cn("px-4 space-y-4 sm:px-12", className)}>{children}</div>;
+};
+
 const ModalHeader = ({ children, className }: ModalHeaderProps) => {
-  return <div className={cn("px-4 sm:px-12", className)}>{children}</div>;
+  return <div className={className}>{children}</div>;
 };
 
 const ModalBody = ({ children, className }: ModalBodyProps) => {
-  return <div className={cn("px-4 sm:px-12", className)}>{children}</div>;
+  return <div className={className}>{children}</div>;
 };
 
 const ModalFooter = ({ children, className }: ModalFooterProps) => {
-  return <div className={cn("px-4 sm:px-12", className)}>{children}</div>;
+  return <div className={className}>{children}</div>;
 };
 
 const Modal = ({ children, className, onClose, show }: ModalProps) => {
@@ -69,7 +73,10 @@ const Modal = ({ children, className, onClose, show }: ModalProps) => {
       {show && (
         <Overlay onClose={onClose}>
           <motion.div
-            className={cn("z-[10000] rounded-lg bg-white shadow-lg", className)}
+            className={cn(
+              "z-[10000] m-auto mt-4 rounded-lg bg-white pb-12 shadow-lg",
+              className,
+            )}
             onClick={(event) => event.stopPropagation()}
             initial="hidden"
             animate="visible"
@@ -88,4 +95,4 @@ const Modal = ({ children, className, onClose, show }: ModalProps) => {
 };
 
 export default Modal;
-export { ModalHeader, ModalBody, ModalFooter };
+export { ModalHeader, ModalBody, ModalFooter, ModalContent };

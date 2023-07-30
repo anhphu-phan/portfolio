@@ -54,7 +54,7 @@ const Carousel = ({ children }: Props) => {
       >
         {children}
       </motion.div>
-      <div className="flex justify-between gap-4 sm:gap-6 md:gap-8">
+      <div className="flex justify-between gap-4 sm:gap-6 md:gap-8 overflow-y-hidden">
         {[...Array(n).keys()].map((_, i) => (
           <button key={i} className="p-[7px]" onClick={() => setIndex(i)}>
             <div className="aspect-square w-[6px] cursor-pointer rounded-full bg-transparent/50">
