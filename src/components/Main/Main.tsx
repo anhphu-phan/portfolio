@@ -1,4 +1,4 @@
-import { Container } from "../shared";
+import Container from "@/components/shared/Container";
 import Hero from "./Hero";
 import { Projects } from "./Projects";
 import { Skills } from "./Skills";
