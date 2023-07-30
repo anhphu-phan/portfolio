@@ -26,7 +26,7 @@ const Overlay = ({ children, onClose, className }: Props) => {
   return ReactDOM.createPortal(
     <motion.div
       className={cn(
-        "fixed inset-0 z-[9999] flex items-center justify-center bg-black/80",
+        "fixed z-[9999] flex inset-0 overflow-scroll overscroll-contain bg-black/80",
         className,
       )}
       onClick={onClose}
