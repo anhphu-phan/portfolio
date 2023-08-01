@@ -15,8 +15,6 @@ import { Separator } from "@/components/ui/separator";
 import Tag from "@/components/shared/Tag";
 
 import { cn } from "@/utils";
-import { techs } from "@/data";
-import { Github } from "lucide-react";
 
 interface Props {
   project: ProjectType;
@@ -76,9 +74,13 @@ export default function Project({ project }: Props) {
             DETAILS
           </Button>
         </Curtain>
-        <div>
-          <Image src={mainImage} alt={project.name} placeholder="blur" quality={100} />
-        </div>
+        <Image
+          src={mainImage}
+          alt={project.name}
+          placeholder="blur"
+          quality={100}
+          className="h-auto max-w-full"
+        />
         <div className="flex flex-col items-center gap-4">
           <h4 className="text-2xl font-bold">{project.name}</h4>
           <p className="text-lg">{project.summary}</p>
@@ -90,7 +92,16 @@ export default function Project({ project }: Props) {
           <ModalHeader>
             <Carousel>
               {imagesInProjectDir.map((image) => (
-                <Image src={image} alt="" key={image.src} sizes="80vw" placeholder="blur" />
+                <Image
+                  key={image.src}
+                  src={image}
+                  alt=""
+                  width={1600}
+                  height={757}
+                  sizes="80vw"
+                  placeholder="blur"
+                  className="shrink-0"
+                />
               ))}
             </Carousel>
           </ModalHeader>
